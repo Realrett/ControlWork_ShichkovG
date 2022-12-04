@@ -7,7 +7,7 @@ int[] InitArray(int n)
 	    Random rnd = new Random();
 	    for (int i = 0; i < n; i++)
 	    {
-	        res[i] = rnd.Next(-10000,10001);
+	        res[i] = rnd.Next(-5000,5001);
 	    }
 	    return res;
 	}
@@ -28,8 +28,22 @@ int result = int.Parse(Console.ReadLine());
 return result;
 }
 
+int[] ThreeSymbols(int[] array)
+	{
+        int[] result = new int[array.Length];
+	   	    for (int i = 0; i < array.Length; i++)
+	    {
+	        if (array[i]>= -99 && array[i]<= 999) 
+               result[i] = array[i];
+        }
+	    return result;
+	}
+
 
 int n = GetNumber("Введите число элементов массива: ");
 int[] array = InitArray(n);
 Console.WriteLine();
 PrintArray(array);
+Console.WriteLine("Преобразованный массив: ");
+int[] newarray = ThreeSymbols(array);
+PrintArray(newarray);
