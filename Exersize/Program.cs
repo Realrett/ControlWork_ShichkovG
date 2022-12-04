@@ -5,7 +5,7 @@ int[] InitArray()
 	{
 	    int[] res = new int[n];
 	    Random rnd = new Random();
-	    for (int i = 0; i < res.Length; i++)
+	    for (int i = 0; i < n; i++)
 	    {
 	        res[i] = rnd.Next(-10000,10001);
 	    }
@@ -20,3 +20,5 @@ int[] InitArray()
 	    }
 	    Console.WriteLine();
 	}
+
+    
