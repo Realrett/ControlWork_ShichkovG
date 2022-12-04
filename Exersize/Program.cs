@@ -30,13 +30,11 @@ return result;
 
 int[] ThreeSymbols(int[] array)
 	{
-		int count = 0;
-        int[] result = new int[count];
+        int[] result = new int[array.Length];
 	   	    for (int i = 0; i < array.Length; i++)
 	    {
 	        if (array[i]>= -99 && array[i]<= 999) 
-			 count = count+1;
-             result[i] = array[i];
+			  result[i] = array[i];
         }
 	    return result;
 	}
