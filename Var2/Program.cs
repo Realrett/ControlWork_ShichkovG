@@ -29,14 +29,12 @@ return result;
 
 string[] ThreeSymbols(string[] array)
 	{
-        int count = 1;
-        string[] result = new string[array.Length];
+            string[] result = new string[array.Length];
         
 	   	    for (int i = 0; i < array.Length; i++)
 	    {
 	        if (array[i].Length <= 3) 
-               result[i] = array[i]; 
-               count=count+1;
+               result[i] = array[i];       
         }
 	    return result;
 	}
@@ -45,6 +43,7 @@ int n = GetNumber("Введите число элементов массива: 
 string[] array = InitArray(n);
 Console.WriteLine();
 PrintArray(array);
+Console.WriteLine();
 Console.WriteLine("Преобразованный массив: ");
 string[] newarray = ThreeSymbols(array);
 PrintArray(newarray);

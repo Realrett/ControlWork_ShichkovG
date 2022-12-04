@@ -30,13 +30,13 @@ return result;
 
 int[] ThreeSymbols(int[] array)
 	{
-		int count = 1;
+		int count = 0;
         int[] result = new int[count];
 	   	    for (int i = 0; i < array.Length; i++)
 	    {
 	        if (array[i]>= -99 && array[i]<= 999) 
-               result[i] = array[i];
-			   count = count +1;
+			 count = count+1;
+             result[i] = array[i];
         }
 	    return result;
 	}
@@ -46,6 +46,7 @@ int n = GetNumber("Введите число элементов массива: 
 int[] array = InitArray(n);
 Console.WriteLine();
 PrintArray(array);
+Console.WriteLine();
 Console.WriteLine("Преобразованный массив: ");
 int[] newarray = ThreeSymbols(array);
 PrintArray(newarray);
