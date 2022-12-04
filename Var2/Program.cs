@@ -5,7 +5,7 @@
 	    Random rnd = new Random();
 	    for (int i = 0; i < res.Length; i++)
 	    {
-	        res[i] = ((int)rnd.Next(-5000, 5001)).ToString();
+	        res[i] = ((int)rnd.Next(-1500, 1500)).ToString();
 	    }
 	    return res;
 	}
@@ -27,7 +27,24 @@ int result = int.Parse(Console.ReadLine());
 return result;
 }
 
+string[] ThreeSymbols(string[] array)
+	{
+        int count = 1;
+        string[] result = new string[array.Length];
+        
+	   	    for (int i = 0; i < array.Length; i++)
+	    {
+	        if (array[i].Length <= 3) 
+               result[i] = array[i]; 
+               count=count+1;
+        }
+	    return result;
+	}
+
 int n = GetNumber("Введите число элементов массива: ");
 string[] array = InitArray(n);
 Console.WriteLine();
 PrintArray(array);
+Console.WriteLine("Преобразованный массив: ");
+string[] newarray = ThreeSymbols(array);
+PrintArray(newarray);
