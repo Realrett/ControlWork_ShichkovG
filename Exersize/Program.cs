@@ -1,7 +1,7 @@
 ﻿/*Написать программу, которая из имеющегося массива строк формирует массив строк, 
 длина которых меньше либо равна 3 символам.*/
 
-int[] InitArray()
+int[] InitArray(int n)
 	{
 	    int[] res = new int[n];
 	    Random rnd = new Random();
@@ -21,4 +21,15 @@ int[] InitArray()
 	    Console.WriteLine();
 	}
 
-    
+    int GetNumber(string message)
+{
+Console.WriteLine(message);
+int result = int.Parse(Console.ReadLine());
+return result;
+}
+
+
+int n = GetNumber("Введите число элементов массива: ");
+int[] array = InitArray(n);
+Console.WriteLine();
+PrintArray(array);
